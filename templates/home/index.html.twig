@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 40px;
+    }
+
+    .home-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .home-buttons {
+        margin-top: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .btn-login {
+        background-color: #007bff;
+    }
+
+    .btn-register {
+        background-color: #28a745;
+    }
+
+    .btn:hover {
+        opacity: 0.8;
+    }
+</style>
+
+<div class="home-container">
+  {% if app.user %}
+      <h1>Welcome {{ app.user.firstname }} {{ app.user.lastname }}!</h1>
+      <p>Thank you for visiting our registration and login demo project.</p>
+      <p>Please feel free to explore the features and functionalities.</p>
+      <a href="{{ path('app_logout') }}" class="btn btn-login">Logout</a>
+  {% else %}
+      <h1>Welcome to Our Website!</h1>
+      <p>Thank you for visiting our registration and login demo project.</p>
+      <p>Please feel free to explore the features and functionalities.</p>
+      <div class="home-buttons">
+          <a href="{{ path('app_login') }}" class="btn btn-login">Login</a>
+          <a href="{{ path('app_register') }}" class="btn btn-register">Register</a>
+      </div>
+ {% endif %}
+</div>
+{% endblock %}

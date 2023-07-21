@@ -1,0 +1,68 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 70%; 
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="checkbox"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+.btn {
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+  width: 175px;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
